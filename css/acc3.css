@@ -1,0 +1,60 @@
+* Clean up the lists styles */
+ul.accordion {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hide the radio buttons */
+/* These are what allow us to toggle content panes */
+ul.accordion label + input[type='radio'] {
+  display: none;
+}
+
+/* Give each content pane some styles */
+ul.accordion li {
+  background-color: rgba(255,255,255,0.5);
+  border-bottom: 1px solid #ffffff;
+}
+
+/* Make the main tab look more clickable */
+ul.accordion label {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #80cb92), color-stop(100%, #3ca957)); background-image: -webkit-linear-gradient(#80cb92, #3ca957); background-image: -moz-linear-gradient(#80cb92, #3ca957); background-image: -o-linear-gradient(#80cb92, #3ca957); background-image: linear-gradient(#80cb92, #3ca957); -webkit-box-shadow: inset 0 0 3px #daf0e0; -moz-box-shadow: inset 0 0 3px #daf0e0; box-shadow: inset 0 0 3px #daf0e0; border: 1px solid #2c6d3c;
+  font-size: 30px;
+  color: #FFFFFF;
+  line-height: 32px;
+  display: block;
+  padding: 10px;
+}
+
+.alignleft {
+  float: left;
+  width: 75%;
+  text-align: left;
+}
+
+.alignright {
+ float: left;
+ width: 25%;
+ font-size: 20px;
+ color: 
+ text-align: right;
+}​
+
+ul.accordion label:hover {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #a1d3ad), color-stop(100%, #68c07d)); background-image: -webkit-linear-gradient(#a1d3ad, #68c07d); background-image: -moz-linear-gradient(#a1d3ad, #68c07d); background-image: -o-linear-gradient(#a1d3ad, #68c07d); background-image: linear-gradient(#a1d3ad, #68c07d); -webkit-box-shadow: inset 0 0 3px #f8fcf9; -moz-box-shadow: inset 0 0 3px #f8fcf9; box-shadow: inset 0 0 3px #f8fcf9; border: 1px solid #469659;
+}
+
+/* Set up the div that will show and hide */
+ul.accordion div.content {
+  overflow: hidden;
+  padding: 0 10px;
+  display: none;
+  -webkit-transition-duration: 0.3s; -moz-transition-duration: 0.3s; -o-transition-duration: 0.3s; transition-duration: 0.3s;
+}
+
+/* Show the content boxes when the radio buttons are checked */
+ul.accordion label + input[type='radio']:checked + div.content {
+  display: block;
+  -webkit-transition-duration: 0.3s; -moz-transition-duration: 0.3s; -o-transition-duration: 0.3s; transition-duration: 0.3s;o
+}

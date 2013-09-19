@@ -1,0 +1,48 @@
+* Clean up the lists styles */
+ul.accordion {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hide the radio buttons */
+/* These are what allow us to toggle content panes */
+ul.accordion label + input[type='radio'] {
+  display: none;
+}
+
+/* Give each content pane some styles */
+ul.accordion li {
+  background-color: rgba(255,255,255,0.5);
+  border-bottom: 1px solid #ffffff;
+}
+
+/* Make the main tab look more clickable */
+ul.accordion label {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #85b7e7), color-stop(100%, #2a85dc)); background-image: -webkit-linear-gradient(#85b7e7, #2a85dc); background-image: -moz-linear-gradient(#85b7e7, #2a85dc); background-image: -o-linear-gradient(#85b7e7, #2a85dc); background-image: linear-gradient(#85b7e7, #2a85dc); -webkit-box-shadow: inset 0 0 3px #f0f6fc; -moz-box-shadow: inset 0 0 3px #f0f6fc; box-shadow: inset 0 0 3px #f0f6fc; border: 1px solid #1f5e9b;
+  font-size: 36px;
+  color: #FFFFFF;
+  line-height: 38px;
+  text-align: center;
+  display: block;
+  padding: 10px;
+  
+}
+
+ul.accordion label:hover {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #a2d4fc), color-stop(100%, #54b2fe)); background-image: -webkit-linear-gradient(#a2d4fc, #54b2fe); background-image: -moz-linear-gradient(#a2d4fc, #54b2fe); background-image: -o-linear-gradient(#a2d4fc, #54b2fe); background-image: linear-gradient(#a2d4fc, #54b2fe); -webkit-box-shadow: inset 0 0 3px white; -moz-box-shadow: inset 0 0 3px white; box-shadow: inset 0 0 3px white; border: 1px solid #0e90f8;
+}
+
+/* Set up the div that will show and hide */
+ul.accordion div.content {
+  overflow: hidden;
+  padding: 0 10px;
+  display: none;
+  -webkit-transition-duration: 0.3s; -moz-transition-duration: 0.3s; -o-transition-duration: 0.3s; transition-duration: 0.3s;
+}
+
+/* Show the content boxes when the radio buttons are checked */
+ul.accordion label + input[type='radio']:checked + div.content {
+  display: block;
+  -webkit-transition-duration: 0.3s; -moz-transition-duration: 0.3s; -o-transition-duration: 0.3s; transition-duration: 0.3s;
+}
